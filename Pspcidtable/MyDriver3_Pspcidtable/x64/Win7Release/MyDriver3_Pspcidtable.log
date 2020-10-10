@@ -1,0 +1,22 @@
+﻿生成启动时间为 2012/10/10 15:33:16。
+     1>项目“C:\Users\liu\Documents\Visual Studio 2013\Projects\MyDriver3_Pspcidtable\MyDriver3_Pspcidtable\MyDriver3_Pspcidtable.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>StampInf:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\stampinf.exe -d "*" -a "amd64" -v "*" -k "1.11" -u "1.11.0" -f x64\Win7Release\MyDriver3_Pspcidtable.inf 
+         Stamping x64\Win7Release\MyDriver3_Pspcidtable.inf [Version] section with DriverVer=10/10/2012,15.33.16.945
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Ix64\Win7Release\ /Zi /nologo /W4 /WX- /Ox /Os /Oy- /D _WIN64 /D _AMD64_ /D AMD64 /D _WIN32_WINNT=0x0601 /D WINVER=0x0601 /D WINNT=1 /D NTDDI_VERSION=0x06010000 /GF /Gm- /Zp8 /GS /Gy /fp:precise /Zc:wchar_t- /Zc:forScope- /GR- /Fo"x64\Win7Release\\" /Fd"x64\Win7Release\vc120.pdb" /Gz /wd4603 /wd4627 /wd4986 /wd4987 /wd4996 /FI"C:\Program Files (x86)\Windows Kits\8.1\Include\Shared\warning.h" /errorReport:prompt /kernel -cbstring -d2epilogunwind  /d1nodatetime /d1import_no_registry /d2AllowCompatibleILVersions /d2Zi+ "源.c"
+         源.c
+     1>源.c(8): warning C4100: “pDriverObject”: 未引用的形参
+     1>源.c(19): warning C4201: 使用了非标准扩展 : 无名称的结构/联合
+     1>源.c(37): warning C4022: “MmIsAddressValid”: 指针与实参 1 不匹配
+     1>源.c(40): warning C4047: “初始化”:“POBJECT_HEADER”与“ULONG64”的间接级别不同
+     1>源.c(75): warning C4047: “初始化”:“ULONG64”与“PVOID”的间接级别不同
+     1>源.c(122): warning C4100: “pRegistryString”: 未引用的形参
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\liu\Documents\Visual Studio 2013\Projects\MyDriver3_Pspcidtable\x64\Win7Release\MyDriver3_Pspcidtable.sys" /VERSION:"6.3" /INCREMENTAL:NO /NOLOGO /WX /SECTION:"INIT,d" "C:\Program Files (x86)\Windows Kits\8.1\lib\win7\KM\x64\BufferOverflowK.lib" "C:\Program Files (x86)\Windows Kits\8.1\lib\win7\KM\x64\ntoskrnl.lib" "C:\Program Files (x86)\Windows Kits\8.1\lib\win7\KM\x64\hal.lib" "C:\Program Files (x86)\Windows Kits\8.1\lib\win7\KM\x64\wmilib.lib" /NODEFAULTLIB /MANIFEST:NO /DEBUG /PDB:"C:\Users\liu\Documents\Visual Studio 2013\Projects\MyDriver3_Pspcidtable\x64\Win7Release\MyDriver3_Pspcidtable.pdb" /SUBSYSTEM:NATIVE,"6.01" /Driver /OPT:REF /OPT:ICF /ENTRY:"GsDriverEntry" /RELEASE /IMPLIB:"C:\Users\liu\Documents\Visual Studio 2013\Projects\MyDriver3_Pspcidtable\x64\Win7Release\MyDriver3_Pspcidtable.lib" /MERGE:"_TEXT=.text;_PAGE=PAGE" /MACHINE:X64 /PROFILE /kernel /IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221,4108,4088,4218,4218,4235 /osversion:6.3 /pdbcompress /debugtype:pdata "x64\Win7Release\源.obj"
+         MyDriver3_Pspcidtable.vcxproj -> C:\Users\liu\Documents\Visual Studio 2013\Projects\MyDriver3_Pspcidtable\x64\Win7Release\MyDriver3_Pspcidtable.sys
+     1>已完成生成项目“C:\Users\liu\Documents\Visual Studio 2013\Projects\MyDriver3_Pspcidtable\MyDriver3_Pspcidtable\MyDriver3_Pspcidtable.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.51
