@@ -44,7 +44,7 @@ VOID EnumFirstTable(ULONG64 TableCode,int j)
 					//ObjectAddress--->Eprocess
 					//DbgPrint("%p\n", ObjectAddress);
 					//PID其实就是句柄索引
-					DbgPrint("PID:%d  ", j * 512 + i * 4);
+					DbgPrint("PID:%d  ", j * 256 * 4 + i * 4);
 					DbgPrint("NAME:%s\n", ObjectAddress + 0x2e0);//由于15字节限制,这样输出进程名不全,勤快的自行改进
 				}
 
