@@ -23,26 +23,26 @@
     BOOLEAN GetPspCidTableAddress(PULONG64 PspCidTable)
     {
 
-	UNICODE_STRING FuncName;
-	RtlInitUnicodeString(&FuncName, L"PsLookupProcessByProcessId");
-	ULONG64 FuncAddress = MmGetSystemRoutineAddress(&FuncName);
-	if (!FuncAddress)
-		return FALSE;
+		UNICODE_STRING FuncName;
+		RtlInitUnicodeString(&FuncName, L"PsLookupProcessByProcessId");
+		ULONG64 FuncAddress = MmGetSystemRoutineAddress(&FuncName);
+		if (!FuncAddress)
+			return FALSE;
 
-	for (int i = 0; i < 100; i++)
-	{
-		if (*(PUCHAR)(FuncAddress + i) == 0x48 &&
-			*(PUCHAR)(FuncAddress + i + 1) == 0x8b &&
-			*(PUCHAR)(FuncAddress + i + 2) == 0xd1)
+		for (int i = 0; i < 100; i++)
 		{
-			int Offset = *(int*)(FuncAddress + i + 3 + 3);
-			int CodeLength = 7;
-			ULONG64 StartAddress= FuncAddress + i + 3;
-			*PspCidTable = StartAddress + Offset + CodeLength;
-			return TRUE;
+			if (*(PUCHAR)(FuncAddress + i) == 0x48 &&
+				*(PUCHAR)(FuncAddress + i + 1) == 0x8b &&
+				*(PUCHAR)(FuncAddress + i + 2) == 0xd1)
+			{
+				int Offset = *(int*)(FuncAddress + i + 3 + 3);
+				int CodeLength = 7;
+				ULONG64 StartAddress= FuncAddress + i + 3;
+				*PspCidTable = StartAddress + Offset + CodeLength;
+				return TRUE;
+			}
 		}
-	}
-	return FALSE;
+		return FALSE;
     }  
 
 
